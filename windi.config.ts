@@ -14,6 +14,10 @@ export default defineConfig({
         xl: '1200px',
         '2xl': '1600px',
       },
+      textColor:{
+        'all':'#ff7f50',
+        // 'stop': '#3490dc',      
+      }
     },
   },
 })

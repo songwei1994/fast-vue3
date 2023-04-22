@@ -103,4 +103,197 @@ export default [
       res.end(`hello, ${reqbody}`);
     },
   },
+  {
+    url: '/user/state',
+    timeout: 200,
+    method: 'get',
+    response: () => {
+      const states = [[{
+        name: '接入设备',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '正常运行',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '运行预警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '故障报警',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '作业待时',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '接入设备',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '正常运行',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '运行预警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '故障报警',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '作业待时',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '接入设备',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '正常运行',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '运行预警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '故障报警',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '作业待时',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '接入设备',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '正常运行',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '运行预警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '故障报警',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '作业待时',
+        count: 3,
+        color: 'state-stop'
+      }]];
+      return successResult(states);
+    },
+  },
+  {
+    url: '/user/faultState',
+    timeout: 200,
+    method: 'get',
+    response: () => {
+      const states = [[{
+        name: '异常设备总数',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '电气报警',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '机械报警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '电气故障',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '机械故障',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '异常设备总数',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '电气报警',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '机械报警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '电气故障',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '机械故障',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '异常设备总数',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '正常运行',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '机械报警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '电气故障',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '机械故障',
+        count: 3,
+        color: 'state-stop'
+      }], [{
+        name: '异常设备总数',
+        count: 14,
+        color: 'state-all'
+      }, {
+        name: '电气报警',
+        count: 3,
+        color: 'state-normal'
+      }, {
+        name: '机械报警',
+        count: 3,
+        color: 'state-alarm'
+      }, {
+        name: '电气故障',
+        count: 3,
+        color: 'state-fault'
+      }, {
+        name: '机械故障',
+        count: 3,
+        color: 'state-stop'
+      }]];
+      return successResult(states);
+    },
+  },
+  {
+    url: '/user/lineData',
+    timeout: 200,
+    method: 'get',
+    response: () => {
+      const states = {
+        time:['12','1','2','3','4','5','6','7','8','9','10','11','12'],
+        pidai:[2.10,2.20,2.20,2.20,1.45],
+        duiqu:[2.10,2.20,1.55,2.20,2.20],
+        zhuangchuan:[2.10,1.80,2.20,2.20,1.92],
+        xiechuan:[2.10,2.20,1.45,1.73,1.68],
+      };
+      return successResult(states);
+    },
+  },
 ] as MockMethod[];
